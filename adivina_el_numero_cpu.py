@@ -12,7 +12,7 @@ def adivina_el_número_cpu(x):
     límite_superior = x
 
     respuesta = ''
-    while respuesta != 'c':
+    while respuesta != '=':
         # Generar predicción
          if límite_inferior != límite_superior:
              predicción = random.randint(límite_inferior, límite_superior)
@@ -27,9 +27,9 @@ Si la respuesta es mayor (+)
 Si la respuesta es correcta, ingresa (=)''')\
              .lower()
 
-         if respuesta == 'a':
+         if respuesta == '-':
              límite_superior = predicción - 1
-         elif respuesta == 'b':
+         elif respuesta == '+':
              límite_inferior = predicción + 1
 
     print(f'¡La cpu adivino el número: {predicción} correctamente!')
